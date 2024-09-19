@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitutional Decision-Making Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body style="font-family: Reddit Sans Condensed;">
+   
+
+    <!-- Main Menu Screen -->
+    <div id="main-menu" class="fullscreen" style="top: 20vh;">
+        <h1 style=" text-align: center; font-size: 90px; color: rgb(246, 173, 110); padding-bottom: 0; margin-bottom: 0;">Welcome to CrossRoads!</h1><br>
+        <h2 style=" text-align: center; margin-top: -1vh; color: rgb(251, 220, 148);">You'll be given scenarios and asked to make a decision. Test your understanding of the Constitution and see the consequences!</h2>
+        <br>
+        <div style="top: 10vh; left: 15vw; padding-left: 0; margin-left: 0; "><button id="start-game-btn" style="left: 88vh;">Start Game</button></div>
+    </div>
+    <!-- Domain Selection Screen (hidden initially) -->
+    <div id="domain-selection" class="fullscreen" style="display: none; top: -10vh;">
+        <h1 id="domain-text" style=" text-align: center; font-size: 70px; color: rgb(246, 173, 110); left:-50vw">Select Your Domain</h1> 
+        <div class="domain-buttons"  style="left: -100vh;">
+            <button id="legislature-btn" style="left: -20vh;">LandMark Cases</button>
+            <button id="executive-btn" style="left: -20vh;">Imaginary Scenarios</button>
+        </div>
+    </div>
+
+    <!-- The Map (hidden initially) -->
+    <div id="map-container" class="fullscreen" style="display: none; top: 0;">
+        <iframe id="india-map" src="interactive-map.html" class="fullscreen-iframe" style="scroll-behavior: unset;"></iframe>
+    </div>
+
+    <script>
+        // JavaScript to handle menu transitions
+        document.getElementById('start-game-btn').addEventListener('click', function() {
+            document.getElementById('main-menu').style.display = 'none';
+            document.getElementById('domain-selection').style.display = 'block';
+        });
+
+        document.getElementById('legislature-btn').addEventListener('click', function() {
+            document.getElementById('domain-selection').style.display = 'none';
+            document.getElementById('map-container').style.display = 'flex';
+        });
+
+        document.getElementById('executive-btn').addEventListener('click', function() {
+            document.getElementById('domain-selection').style.display = 'none';
+            document.getElementById('map-container').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

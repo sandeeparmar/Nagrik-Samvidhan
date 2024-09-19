@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001d57;
+    color: #333;
+    position: relative;
+    top: 19vh; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50vw;
+    margin: 2vh 22vw;
+    background-color:#0725617d;
+    padding: 20px;
+    color: #ffffffbc;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgb(174, 173, 173);
+    transform: translateX(10%);
+    transition: transform 0.5s ease;
+}
+
+/* .container:hover{
+    transition: scale(2); 
+} */
+
+h1 {
+    font-size: 2.2em;
+    color: rgb(230, 195, 106);
+}
+
+h2 {
+    font-size: 1.7em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* under; */
+}
+.decision-section{
+    border-style:ridge;
+    border-radius: 1ch;
+    /* margin-left: 10vw; */
+    /* margin-right:auto; */
+
+    /* box-align: center; */
+}
+.constitution-section, .case-section, .decision-section {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#outcome {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}

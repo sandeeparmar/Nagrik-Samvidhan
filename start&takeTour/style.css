@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+
+:root{
+   --primary-color :#764e8af9 ;
+   --accent-color:#3f83f8;
+   --text-color:#e8c9c9;
+   --link-color:#2563eb;
+   --background-color:#ffffff;
+   --light-gray:#f0f0f0;
+   --gray:#808080;
+   --dark-gray:#555;
+}
+*{
+    margin:0;
+    padding: 0;
+    font-family:"Bubblegum Sans",sans-serif;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 0.1rem;
+    overflow-x: hidden;
+}
+
+.header{
+  background-color: #481d5d;
+}
+.header-content{
+    max-width:100% ;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.logo{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    font-weight: bold;
+    color: var(--text-color);
+    gap: 0.625rem;
+    text-decoration: none;
+}
+
+.logo-icon{
+    width: 4.0rem;
+    height:5.875rem ;
+}
+
+
+.logo-txt{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--background-color);
+}
+
+.nav{
+    display: none;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width:768px){
+    .nav{
+        display: flex;
+    }
+}
+.nav-link{
+    color:var(--background-color);
+    font-size: 1.125rem;
+    transform:color 0.1s;
+    font-weight: 600;
+
+}
+.nav-link:hover{
+    color: var(--text-color);
+    text-decoration: underline;
+    text-transform: lowercase;
+  }
+
+.contact-btn{
+    display: none;
+    border:none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+@media screen and (min-width:768px){
+    .contact-btn{
+        display: block;
+    }
+    
+}
+.contact-btn:hover{
+    background-color: #38154af9;
+}
+.menu-button{
+    display: none;
+    border: none;
+    border-radius:0.375rem ;
+    background-color:var(--background-color) ;
+    padding: 0.5rem  0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+@media screen and (max-width:768px) {
+    .menu-button{
+        display: block;
+    }
+}
+.menu-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    
+}
+
+#dropbtn{
+   padding: 0px;
+   border: none;
+   background-color: inherit;
+}
+
+.dropdown{
+  position :relative;
+  display: inline-block;
+}
+
+.dropdown-content{
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width:140px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 7px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+
+/*card */
+
+.main-Container{
+  background-color: #5b2d72f9;
+}
+
+/* Card Container */
+.card-container {
+  padding: 5vh 0vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  position: relative;
+}
+
+/* Card Component */
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid gray;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 25vw;
+  height: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.749);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(7, 22, 82, 0.717);
+}
+
+
+@media screen and (max-width:768px) {
+  .card-container{
+     flex-wrap: nowrap;
+     gap:3vh ; 
+  }
+  .card{
+     height: 30vh;
+  }
+
+}
+
+
+
+@media screen and (max-width:430px) {
+.card-container{
+   flex-direction: column;
+   flex-wrap: nowrap;
+   gap:3vh ; 
+}
+.card{
+   height: auto;
+   width: auto;
+}
+}
+
+
+/* Card Header with Image */
+.card-header img {
+  width: 100%;
+  height: 180px;
+  display: block;
+}
+
+/* Card Body */
+.card-body {
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Card Description */
+.card-description {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+
+
+
+/* Card Button */
+.card-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+
+.footer-copyright{
+  color: var(--background-color);
+  font-size: 0.75rem;
+  padding-bottom: 2rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--dark-gray);
+  background-color: #5e3174e1;
+}

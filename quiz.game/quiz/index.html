@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="../../images/quizImage.jpg" type="image/x-icon">
+</head>
+<body>
+    <div id="instructions" class="instructions-container">
+        <h1>Welcome to the Quiz Game!</h1>
+        <p>This game will test your knowledge of the Constitution of India. Here's how to play:</p>
+        <ul>
+            <li>You will have 20 seconds to answer each question.</li>
+            <li>Select the answer you think is correct and click "Submit" to proceed to the next question.</li>
+            <li>Your score will be displayed at the end of the quiz, along with your high score.</li>
+        </ul>
+        <button id="start-game">Start Game</button>
+    </div>
+
+    <div id="user-data" class="user-data-container hidden">
+        <h2>Enter Your Name to Save High Scores</h2>
+        <input type="text" id="username" placeholder="Your Name">
+        <button id="submit-username">Submit</button>
+    </div>
+
+    <div id="quiz" class="hidden" style="padding: 20px;
+    background-color: #0000003f;
+    color: white;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: 15%;
+    border: 1px solid;
+    border-radius: 12px;
+    box-shadow: -3px 5px white, -6px 9px black;" >
+        <div id="timer">Time: <span id="time">20</span> seconds</div>
+        <div id="progress">
+            Question <span id="current">1</span> of <span id="total-questions">4</span>
+            <div id="progress-bar"></div>
+        </div>
+        <h2 id="question">Question text</h2>
+        <div class="options">
+            <label>
+                <input type="radio" name="answer" class="answer" id="a">
+                <span id="a_text">Option A</span>
+            </label>
+            <label>
+                <input type="radio" name="answer" class="answer" id="b">
+                <span id="b_text">Option B</span>
+            </label>
+            <label>
+                <input type="radio" name="answer" class="answer" id="c">
+                <span id="c_text">Option C</span>
+            </label>
+            <label>
+                <input type="radio" name="answer" class="answer" id="d">
+                <span id="d_text">Option D</span>
+            </label>
+        </div>
+        <button id="submit">Submit</button>
+        <div id="feedback" class="hidden"></div>
+    </div>
+
+    <div id="result" class="hidden">
+        <h2>You answered <span id="score"></span> out of <span id="total"></span> questions correctly.</h2>
+        <h3>Your high score is: <span id="high-score"></span></h3>
+        <button id="restart">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

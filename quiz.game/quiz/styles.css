@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#001d57;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container Styles */
+.instructions-container,
+.user-data-container,
+.quiz-container,
+#result {
+    padding: 20px;
+    background-color: #0000003f;
+    color: white;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: 15%;
+    border: 1px solid;
+    border-radius: 12px;
+    box-shadow: -3px 5px white, -6px 9px black;
+}
+
+/* Heading Styles */
+.instructions-container h1,
+.user-data-container h1,
+.quiz-container h1,
+#result h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 25px;
+    margin: 15px;
+}
+
+/* Paragraph and List Styles */
+.instructions-container p,
+.user-data-container p,
+.quiz-container p,
+#result p {
+    font-size: 18px;
+    margin: 10px;
+    word-spacing: 7px;
+}
+
+.instructions-container ul,
+.user-data-container ul,
+.quiz-container ul,
+#result ul {
+    margin: 15px;
+}
+
+.instructions-container ul li,
+.user-data-container ul li,
+.quiz-container ul li,
+#result ul li {
+    margin: 9px 0px;
+    font-size: 18px;
+}
+
+/* Button Styles */
+.instructions-container button,
+.user-data-container button,
+.quiz-container button,
+#result button {
+    position: relative;
+    left: 30%;
+    margin: 10px 5px;
+    font-size: 28px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Utility Styles */
+.hidden {
+    display: none;
+    
+}
+
+h1, h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#timer, #progress {
+    margin-bottom: 15px;
+}
+
+#progress-bar {
+    background-color: #007bff;
+    height: 10px;
+    width: 0;
+}
+
+.options label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
